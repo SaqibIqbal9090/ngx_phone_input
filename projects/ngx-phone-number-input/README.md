@@ -1,24 +1,38 @@
 # NgxPhoneNumberInput
 
 This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.0.
+NgxPhoneNumberInput is an Angular library for easy integration of phone number input fields in your Angular applications.
 
-## Code scaffolding
 
-Run `ng generate component component-name --project ngx-phoneNumber-input` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-phoneNumber-input`.
-> Note: Don't forget to add `--project ngx-phoneNumber-input` or else it will be added to the default project in your `angular.json` file. 
 
-## Build
+# Installation
+To install NgxPhoneNumberInput in your Angular project, you can use npm:
 
-Run `ng build ngx-phoneNumber-input` to build the project. The build artifacts will be stored in the `dist/` directory.
+npm install ngx-phone-number-input
 
-## Publishing
+# Dependencies
 
-After building your library with `ng build ngx-phoneNumber-input`, go to the dist folder `cd dist/ngx-phone-number-input` and run `npm publish`.
+npm install country-list-json
+npm install primeng
 
-## Running unit tests
+# Style.css
 
-Run `ng test ngx-phoneNumber-input` to execute the unit tests via [Karma](https://karma-runner.github.io).
+@import 'primeng/resources/themes/md-light-indigo/theme.css';
+
+
+# Usage
+Once installed, you can import the NgxPhoneNumberInputModule into your Angular module:
+Import 
+import { NgxPhoneNumberInputModule } from 'ngx-phone-number-input';
+
+<form [formGroup]="phoneInputForm">
+  <ngx-phone-input formControlName="phone"></ngx-phone-input>
+</form>
+
 
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+# License
+This library is licensed under the MIT License.
