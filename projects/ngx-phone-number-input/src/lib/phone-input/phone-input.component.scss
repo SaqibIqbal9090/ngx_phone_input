@@ -1,0 +1,78 @@
+@font-face {
+  font-family: NotoColorEmojiLimited;
+  unicode-range: U+1F1E6-1F1FF;
+  src: url(https://raw.githack.com/googlefonts/noto-emoji/main/fonts/NotoColorEmoji.ttf);
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield; /* Firefox */
+}
+
+.flag {
+  font-family: 'NotoColorEmojiLimited', -apple-system, BlinkMacSystemFont,
+  'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+  'Segoe UI Emoji', 'Segoe UI Symbol';
+
+  cursor: pointer;
+}
+.options{
+  top: 5px;
+  display: none;
+  z-index: 99;
+  width: 250px;
+  position: relative;
+  height: 15vh;
+  overflow-y: auto;
+  border: 1px solid rgb(204, 202, 202);
+  border-radius: 5px;
+  justify-content: flex-start;
+  background: rgba(255, 255, 255, 1);
+  ul{
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 2px;
+    .option{
+      width: 90%;
+      padding: 5px;
+      display: flex;
+      justify-content: space-between;
+      span{
+        width: 80%;
+      }
+    }
+
+
+    li:hover{
+      background-color: rgb(196, 210, 252);
+    }
+  }
+}
+
+::ng-deep{
+  .p-icon-field .p-input-icon{
+    margin-top: -0.7rem;
+
+  }
+  .p-icon-field-left .p-input-icon:first-of-type {
+color: white;
+  }
+}
+::-webkit-scrollbar {
+width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  padding: 3px;
+  border-radius: 5px;
+}
