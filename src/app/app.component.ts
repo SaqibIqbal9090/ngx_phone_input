@@ -7,16 +7,5 @@ import { FormControl, FormGroup } from '@angular/forms';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  phoneInput = new FormGroup({
-    phone: new FormControl(''),
-  });
-  title = 'phone-input';
-  constructor(){
-
-  }
-
-  selected(){
-    console.log(this.phoneInput.value);
-
-  }
+ 
 }

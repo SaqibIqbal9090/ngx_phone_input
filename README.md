@@ -54,9 +54,38 @@ export class AppModule { }
 ```
 2. In your component template, use the ngx-phone-input component within a reactive form:
 ```ts
-<form [formGroup]="phoneInputForm">
   <ngx-phone-input formControlName="phone"></ngx-phone-input>
+
+```
+# Example
+
+### Ts
+
+```  ts
+
+ phoneInput = new FormGroup({
+    phone: new FormControl(''),
+  });
+  title = 'phone-input';
+  constructor(){
+
+  }
+
+  selected(){
+    console.log(this.phoneInput.value);
+
+  }
+
+  ```
+
+  ### html
+  ``` html
+  <form [formGroup]="phoneInput" (submit)="selected()">
+  <ngx-lib-phone-input  formControlName="phone"></ngx-lib-phone-input>
+  <button type="submit">click</button>
 </form>
+
+
 ```
 
 
