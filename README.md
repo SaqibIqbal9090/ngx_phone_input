@@ -1,27 +1,27 @@
-# NgxPhoneNumberInput
+# ngx-lib-phone-input
 
 This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.0.
 NgxPhoneNumberInput is an Angular library for easy integration of phone number input fields in your Angular applications.
 
-
 # Live Demo
 
-See a live example of NgxPhoneNumberInput in action on Stackblitz: [DEMO](https://stackblitz.com/~/github.com/SaqibIqbal9090/ngx_phone_input)
+See a live example of NgxPhoneNumberInput in action on Stackblitz: [DEMO](https://stackblitz.com/~/github.com/SaqibIqbal9090/NgxPhoneNumberInput_Example)
 
 # Installation
+
 To install NgxPhoneNumberInput in your Angular project, you can use npm:
 
 ```sh
-$ npm install ngx-phone-number-input
-
+$ npm install ngx-lib-phone-input
 ```
 
 # Dependencies
 
 This library requires the following additional dependencies:
 
-country-list-json
-primeng
+- country-list-json
+- primeng
+
 You can install them using npm:
 
 ```sh
@@ -33,68 +33,68 @@ $ npm install primeng
 
 The library includes styles based on PrimeNG's md-light-indigo theme. You can import it in your styles.css file:
 
-```cs
+```css
 @import 'primeng/resources/themes/md-light-indigo/theme.css';
 ```
 
-
 # Usage
+
 ### Import 
+
 1. Import the NgxPhoneNumberInputModule into your Angular module:
 
-```ts
-import { NgxPhoneNumberInputModule } from 'ngx-phone-number-input';
+    ```ts
+    import { NgxPhoneNumberInputModule } from "ngx-lib-phone-input";
 
-@NgModule({
-  imports: [
-    // ... other imports
-    NgxPhoneNumberInputModule
-  ],
-  // ...
-})
-export class AppModule { }
+    @NgModule({
+      imports: [
+        // ... other imports
+        NgxPhoneNumberInputModule
+      ],
+      // ...
+    })
+    export class AppModule { }
+    ```
 
-```
-2. In your component template, use the ngx-phone-input component within a reactive form:
-```ts
-  <ngx-phone-input formControlName="phone"></ngx-phone-input>
+2. In your component template, use the ngx-lib-phone-input component within a reactive form:
 
-```
+    ```html
+    <ngx-lib-phone-input formControlName="phone"></ngx-lib-phone-input>
+    ```
+
 # Example
 
-### Ts
+### TypeScript
 
-```  ts
+```ts
+  constructor(){ }
+number:any
+  MyForm = new FormGroup({
+    phoneNumber : new FormControl('')
+  })
 
- phoneInput = new FormGroup({
-    phone: new FormControl(''),
-  });
-  title = 'phone-input';
-  constructor(){
-
+  submit(){
+    this.number =this.MyForm.value.phoneNumber || "";
   }
-
-  selected(){
-    console.log(this.phoneInput.value);
-
-  }
-
-  ```
-
-  ### html
-  ``` html
-  <form [formGroup]="phoneInput" (submit)="selected()">
-  <ngx-lib-phone-input  formControlName="phone"></ngx-lib-phone-input>
-  <button type="submit">click</button>
-</form>
-
-
 ```
 
+### HTML
+
+```html
+<form [formGroup]="MyForm" (submit)="submit()">
+  <ngx-lib-phone-input  formControlName="phoneNumber"></ngx-lib-phone-input>
+  <button >Get Number</button>
+</form>
+```
 
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
 # License
+
 This library is licensed under the MIT License.
+
+# Keywords
+
+Angular, phone number input, ngx-lib-phone-input, phone input field, reactive forms
