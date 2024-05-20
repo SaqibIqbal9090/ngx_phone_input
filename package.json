@@ -1,6 +1,7 @@
 {
   "name": "ngx-input-phone",
   "version": "0.0.5",
+  "license": "MIT",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
