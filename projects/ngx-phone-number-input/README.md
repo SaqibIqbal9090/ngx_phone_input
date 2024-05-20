@@ -1,33 +1,95 @@
-# NgxPhoneNumberInput
+# ngx-lib-phone-input
 
 This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.0.
 NgxPhoneNumberInput is an Angular library for easy integration of phone number input fields in your Angular applications.
 
 
+# Live Demo
+
+See a live example of NgxPhoneNumberInput in action on Stackblitz: [DEMO](https://stackblitz.com/~/github.com/SaqibIqbal9090/ngx_phone_input)
 
 # Installation
 To install NgxPhoneNumberInput in your Angular project, you can use npm:
 
-npm install ngx-phone-number-input
+```sh
+$ npm install ngx-phone-number-input
+
+```
 
 # Dependencies
 
-npm install country-list-json
-npm install primeng
+This library requires the following additional dependencies:
+
+country-list-json
+primeng
+You can install them using npm:
+
+```sh
+$ npm install country-list-json
+$ npm install primeng
+```
 
 # Style.css
 
+The library includes styles based on PrimeNG's md-light-indigo theme. You can import it in your styles.css file:
+
+```cs
 @import 'primeng/resources/themes/md-light-indigo/theme.css';
+```
 
 
 # Usage
-Once installed, you can import the NgxPhoneNumberInputModule into your Angular module:
-Import 
-import { NgxPhoneNumberInputModule } from 'ngx-phone-number-input';
+### Import 
+1. Import the NgxPhoneNumberInputModule into your Angular module:
 
-<form [formGroup]="phoneInputForm">
-  <ngx-phone-input formControlName="phone"></ngx-phone-input>
+```ts
+import { NgxPhoneNumberInputModule } from "ngx-lib-phone-input";
+
+@NgModule({
+  imports: [
+    // ... other imports
+    NgxPhoneNumberInputModule
+  ],
+  // ...
+})
+export class AppModule { }
+
+```
+2. In your component template, use the ngx-phone-input component within a reactive form:
+```ts
+<ngx-lib-phone-input formControlName="phone"></ngx-lib-phone-input>
+
+```
+# Example
+
+### Ts
+
+```  ts
+
+ phoneInput = new FormGroup({
+    phone: new FormControl(''),
+  });
+  title = 'phone-input';
+  constructor(){
+
+  }
+
+  selected(){
+    console.log(this.phoneInput.value);
+
+  }
+
+  ```
+
+  ### html
+  ``` html
+  <form [formGroup]="phoneInput" (submit)="selected()">
+  <ngx-lib-phone-input formControlName="phone"></ngx-lib-phone-input>
+  <button type="submit">click</button>
 </form>
+
+
+```
 
 
 ## Further help
@@ -36,3 +98,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 # License
 This library is licensed under the MIT License.
+
+# Keywords
+
