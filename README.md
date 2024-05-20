@@ -4,6 +4,9 @@ This library was generated with [Angular CLI](https://github.com/angular/angular
 NgxPhoneNumberInput is an Angular library for easy integration of phone number input fields in your Angular applications.
 
 
+# Live Demo
+
+See a live example of NgxPhoneNumberInput in action on Stackblitz: [DEMO](https://stackblitz.com/~/github.com/SaqibIqbal9090/ngx_phone_input)
 
 # Installation
 To install NgxPhoneNumberInput in your Angular project, you can use npm:
