@@ -1,5 +1,5 @@
 
-  <div class="card flex justify-content-center ">
+  <div class="card   flex justify-content-center ">
     <p-iconField iconPosition="left">
       <p-inputIcon (click)="showDropdown()">
         <span class="flag">{{selectedCountry.flag}}</span>
@@ -7,14 +7,15 @@
         <input [formControl]="phone"    type="text" pInputText  />
 
     </p-iconField>
+    <div class="options" [ngStyle]="{'display': showOptions ? 'block' : 'none'}">
+      <ul>
+        <li *ngFor="let country of countriesWithCodes" (click)="countrySelect(country)">
+          <div class="option">
+            <i class="flag">{{country.flag}}</i>
+            <span>{{country.name  }} ({{country.dial_code  }})</span>
+          </div>
+        </li>
+      </ul>
+    </div>
   </div>
-  <div class="options" [ngStyle]="{'display': showOptions ? 'block' : 'none'}">
-    <ul>
-      <li *ngFor="let country of countriesWithCodes" (click)="countrySelect(country)">
-        <div class="option">
-          <i class="flag">{{country.flag}}</i>
-          <span>{{country.name  }} ({{country.dial_code  }})</span>
-        </div>
-      </li>
-    </ul>
-  </div>
+

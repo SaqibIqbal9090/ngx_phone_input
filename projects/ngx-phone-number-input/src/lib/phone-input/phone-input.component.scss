@@ -8,7 +8,9 @@ input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-
+.card{
+  position: relative;
+}
 input[type="number"] {
   -moz-appearance: textfield; /* Firefox */
 }
@@ -21,11 +23,11 @@ input[type="number"] {
   cursor: pointer;
 }
 .options {
-  top: 5px;
+  top: 60px;
   display: none;
   z-index: 99;
   width: 250px;
-  position: relative;
+  position: absolute;
   height: 15vh;
   overflow-y: auto;
   border: 1px solid rgb(204, 202, 202);
